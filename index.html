@@ -1,1 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Add EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="animated-background"></div>
 
+    <!-- Dark Mode Toggle Button -->
+    
+    
+    <header>
+        <nav>
+            <div class="nav-content">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button id="theme-toggle" class="toggle-theme" onclick="toggleTheme()">
+                    <span id="theme-text">🌙</span>
+                </button>                
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home" class="section">
+            <div class="content-card home-content">
+                <div class="header-content fade-in">
+                    <div class="profile-container">
+                        <div class="profile-picture">
+                            <img src="profile_photo.jpg" alt="Your Name" class="profile-img">
+                        </div>
+                    </div>
+                    <div class="header-text">
+                        <h1>Hello, I'm <span class="highlight">Titas</span></h1>
+                        <div class="subtitle-wrapper">
+                            <p class="subtitle">Full Stack Developer</p>
+                            <p class="subtitle">Data Analyst</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links fade-in delay-1">
+                    <a href="https://github.com/tazsk" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/titassarkar7" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/tazsk7" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="description fade-in delay-2">
+                    <p>A Fullstack Developer currently pursuing my masters in Computer Science from San Jose State University. I have a strong foundation in front-end, back-end, cloud, and machine learning technologies. I am a proactive, self-driven learner who thrives on embracing hands-on experiences with emerging technologies. Take a look at my projects and feel free to connect with me.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="content-card">
+                <h2 class="fade-in">About Me</h2>
+                
+                <!-- Tabs for Experience -->
+                <div class="tabs fade-in delay-1">
+                    <button class="tab active" onclick="showExperience('sjsu', event)">
+                        <img src="sjsu_logo.png" alt="SJSU Logo" class="tab-logo">
+                    </button>
+                    <button class="tab" onclick="showExperience('cognizant', event)">
+                        <img src="cognizant_logo.jpg" alt="Cognizant Logo" class="tab-logo">
+                    </button>
+                    <button class="tab" onclick="showExperience('cognizant_intern', event)">
+                        <img src="cognizant_logo.jpg" alt="Cognizant Logo" class="tab-logo">
+                    </button>
+                    <button class="tab" onclick="showExperience('makaut', event)">
+                        <img src="makaut_logo.png" alt="Makaut Logo" class="tab-logo">
+                    </button>
+                </div>
+                
+                <!-- Experience Descriptions -->
+                <div id="sjsu" class="experience-content active fade-in delay-2">
+                    <h3>Master of Science in Computer Science</h3>
+                    <p>I am currently in the first semester of my Master of Science in Computer Science program at San Jose State University. As part of my coursework, I am taking advanced subjects, including Topics in Cloud Computing and Topics in Database Systems. These courses provide in-depth knowledge of cloud infrastructure, distributed systems, and database management, all of which are essential in building a robust foundation for my specialization in computer science.</p>
+                </div>
+                <div id="cognizant" class="experience-content fade-in delay-2">
+                    <h3>Software Engineer at Cognizant</h3>
+                    <p>In my role as a Software Engineer at Cognizant, I focused on developing intuitive and responsive front-end templates using React.js, particularly for enhancing insurance plan selection. I designed a user-friendly interface that improved engagement and drove an 11% increase in traffic. To optimize client experience, I implemented JSON data fetching and lazy loading, which enhanced performance by 30%. I also addressed web security issues and utilized AWS for cost optimization, significantly reducing cloud expenses. My commitment to high-quality code was evident through rigorous testing with Jest and React Testing Library., ensuring that our solutions were both robust and user-focused.</p>
+                </div>
+                <div id="cognizant_intern" class="experience-content fade-in delay-2">
+                    <h3>Software Engineer Intern at Cognizant</h3>
+                    <p>During my internship, I gained hands-on experience in front-end and back-end development using React.js, Node.js and Express.js. I integrated APIs and implemented CRUD operations, created a responsive design for a retail platform's dashboard, enhancing usability across devices, and included accessibility features for visually impaired users. I streamlined the code structure to reduce complexity, resulting in an efficient and inclusive user experience. This internship was instrumental in strengthening my skills in full-stack development and my commitment to accessible, high-quality software solutions.</p>
+                </div>
+                <div id="makaut" class="experience-content fade-in delay-2">
+                    <h3>Bachelor of Technology in Computer Science and Engineering</h3>
+                    <p>I hold a Bachelor of Technology degree in Computer Science and Engineering from Maulana Abul Kalam Azad University of Technology, West Bengal, India, with a GPA of 3.92, which was awarded to me in July 2021. Throughout my studies, I engaged in both foundational and specialized coursework, covering areas such as Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, Cloud Computing, Artificial Intelligence, Data Analytics & Machine Learning, and Software Engineering. These subjects provided me with a solid technical foundation and prepared me for diverse applications within the field of computer science.</p>
+                </div>
+        
+                <!-- Skills Section -->
+                <div class="skills fade-in delay-3">
+                    <div class="skill-tag">JavaScript</div>
+                    <div class="skill-tag">ReactJS</div>
+                    <div class="skill-tag">NodeJS</div>
+                    <div class="skill-tag">Redux</div>
+                    <div class="skill-tag">MongoDB</div>
+                    <div class="skill-tag">AWS</div>
+                    <div class="skill-tag">Python</div>
+                    <div class="skill-tag">Pandas</div>
+                    <div class="skill-tag">Scikit-learn</div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="projects" class="section">
+            <div class="content-card">
+                <h2 class="fade-in">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card fade-in delay-1">
+                        <h3>Dunzo Clone</h3>
+                        <p>An e-commerce web application for product delivery featuring an intuitive dashboard, product display and checkout with location based services.</p>
+                        <a href="https://github.com/tazsk/Dunzo" class="project-link">View Project</a>
+                    </div>
+                    <div class="project-card fade-in delay-2">
+                        <h3>Peek-A-Business</h3>
+                        <p>Smart business insights providing decision support to beginners for establishing new businesses and understanding market competition and preferences.</p>
+                        <a href="https://github.com/tazsk/Peek-A-Business" class="project-link">View Project</a>
+                    </div>
+                    <div class="project-card fade-in delay-3">
+                        <h3>Travel List</h3>
+                        <p>An app to manage your travel essentials.</p>
+                        <a href="https://travel-list-steel.vercel.app/" class="project-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="content-card">
+                <h2 class="fade-in">Contact Me</h2>
+                <form id="contact-form" class="contact-form fade-in delay-1">
+                    <div class="form-group">
+                        <input type="text" id="user_name" name="user_name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="user_email" name="user_email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="loading-spinner"></span>
+                    </button>
+                </form>
+                <div id="success-message" class="success-message" style="display: none;">
+                    Message sent successfully! I'll get back to you soon.
+                </div>
+                <div id="error-message" class="error-message" style="display: none;">
+                    Failed to send message. Please try again or email me directly.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            
+            // Update local storage
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+            
+            // Update the button text and icon
+            const themeText = document.getElementById('theme-text');
+            themeText.innerHTML = isDarkMode ? '☀️' : '🌙';
+        }
+
+        // Initialize theme on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-text').innerHTML = '☀️';
+            } else {
+                document.getElementById('theme-text').innerHTML = '🌙';
+            }
+        });
+
+
+        const faders = document.querySelectorAll('.fade-in');
+        
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        
+        const appearOnScroll = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                // Remove appear class when element is not in view
+                if (!entry.isIntersecting) {
+                    entry.target.classList.remove('appear');
+                } else {
+                    entry.target.classList.add('appear');
+                }
+            });
+        }, appearOptions);
+        
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        function showExperience(experienceId, event) {
+            // Hide all experience contents
+            document.querySelectorAll('.experience-content').forEach((content) => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach((tab) => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected experience content
+            document.getElementById(experienceId).classList.add('active');
+
+            // Set active class on the selected tab
+            event.currentTarget.classList.add('active');
+        }
+
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("EOWfUDpkF4ix_dGu8"); // Replace with your actual public key
+        })();
+
+        // Handle form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Show loading state
+            const submitBtn = this.querySelector('.submit-btn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const spinner = submitBtn.querySelector('.loading-spinner');
+            
+            submitBtn.disabled = true;
+            btnText.style.opacity = '0';
+            spinner.style.display = 'block';
+
+            // Hide any existing messages
+            document.getElementById('success-message').style.display = 'none';
+            document.getElementById('error-message').style.display = 'none';
+
+            // Prepare template parameters
+            const templateParams = {
+                from_name: document.getElementById('user_name').value,
+                from_email: document.getElementById('user_email').value,
+                message: document.getElementById('message').value,
+                to_name: 'Titas', // Replace with your name
+                reply_to: document.getElementById('user_email').value,
+            };
+
+            // Send email
+            emailjs.send(
+                'service_1hafk6q', // Replace with your EmailJS service ID
+                'template_b71j2o2', // Replace with your EmailJS template ID
+                templateParams
+            )
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                document.getElementById('success-message').style.display = 'block';
+                document.getElementById('contact-form').reset();
+            })
+            .catch(function(error) {
+                console.log('FAILED...', error);
+                document.getElementById('error-message').style.display = 'block';
+            })
+            .finally(function() {
+                // Reset button state
+                submitBtn.disabled = false;
+                btnText.style.opacity = '1';
+                spinner.style.display = 'none';
+            });
+        });
+
+        // Optional: Add smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
